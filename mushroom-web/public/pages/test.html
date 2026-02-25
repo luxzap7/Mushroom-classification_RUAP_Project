@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mushroom Quick Test</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>Mushroom Quick Test</h1>
+  <nav class="nav">
+    <a href="../index.html">Home</a>
+    <a href="edible.html">Edible</a>
+    <a href="poisonous.html">Poisonous</a>
+  </nav>
+</header>
+
+<main class="content">
+  <section class="card">
+    <h2>Select Mushroom Characteristics</h2>
+
+    <form id="mushroomForm" class="form-grid">
+
+      <div class="form-group">
+        <label>Cap Shape</label>
+        <select name="cap-shape">
+          <option value="b">Bell</option>
+          <option value="c">Conical</option>
+          <option value="x">Convex</option>
+          <option value="f">Flat</option>
+          <option value="k">Knobbed</option>
+          <option value="s">Sunken</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Cap Surface</label>
+        <select name="cap-surface">
+          <option value="f">Fibrous</option>
+          <option value="g">Grooves</option>
+          <option value="y">Scaly</option>
+          <option value="s">Smooth</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Cap Color</label>
+        <select name="cap-color">
+          <option value="n">Brown</option>
+          <option value="b">Buff</option>
+          <option value="c">Cinnamon</option>
+          <option value="g">Gray</option>
+          <option value="r">Green</option>
+          <option value="p">Pink</option>
+          <option value="u">Purple</option>
+          <option value="e">Red</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Bruises</label>
+        <select name="bruises">
+          <option value="t">Bruises</option>
+          <option value="f">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Odor</label>
+        <select name="odor">
+          <option value="a">Almond</option>
+          <option value="l">Anise</option>
+          <option value="c">Creosote</option>
+          <option value="y">Fishy</option>
+          <option value="f">Foul</option>
+          <option value="m">Musty</option>
+          <option value="n">None</option>
+          <option value="p">Pungent</option>
+          <option value="s">Spicy</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gill Attachment</label>
+        <select name="gill-attachment">
+          <option value="a">Attached</option>
+          <option value="d">Descending</option>
+          <option value="f">Free</option>
+          <option value="n">Notched</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gill Spacing</label>
+        <select name="gill-spacing">
+          <option value="c">Close</option>
+          <option value="w">Crowded</option>
+          <option value="d">Distant</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gill Size</label>
+        <select name="gill-size">
+          <option value="b">Broad</option>
+          <option value="n">Narrow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gill Color</label>
+        <select name="gill-color">
+          <option value="k">Black</option>
+          <option value="n">Brown</option>
+          <option value="b">Buff</option>
+          <option value="h">Chocolate</option>
+          <option value="g">Gray</option>
+          <option value="r">Green</option>
+          <option value="o">Orange</option>
+          <option value="p">Pink</option>
+          <option value="u">Purple</option>
+          <option value="e">Red</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Shape</label>
+        <select name="stalk-shape">
+          <option value="e">Enlarging</option>
+          <option value="t">Tapering</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Root</label>
+        <select name="stalk-root">
+          <option value="b">Bulbous</option>
+          <option value="c">Club</option>
+          <option value="u">Cup</option>
+          <option value="e">Equal</option>
+          <option value="z">Rhizomorphs</option>
+          <option value="r">Rooted</option>
+          <!-- Ako ste u treningu imali missing '?' kao kategoriju, možeš dodati: -->
+          <!-- <option value="?">Missing</option> -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Surface Above Ring</label>
+        <select name="stalk-surface-above-ring">
+          <option value="f">Fibrous</option>
+          <option value="y">Scaly</option>
+          <option value="k">Silky</option>
+          <option value="s">Smooth</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Surface Below Ring</label>
+        <select name="stalk-surface-below-ring">
+          <option value="f">Fibrous</option>
+          <option value="y">Scaly</option>
+          <option value="k">Silky</option>
+          <option value="s">Smooth</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Color Above Ring</label>
+        <select name="stalk-color-above-ring">
+          <option value="n">Brown</option>
+          <option value="b">Buff</option>
+          <option value="c">Cinnamon</option>
+          <option value="g">Gray</option>
+          <option value="r">Green</option>
+          <option value="p">Pink</option>
+          <option value="u">Purple</option>
+          <option value="e">Red</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stalk Color Below Ring</label>
+        <select name="stalk-color-below-ring">
+          <option value="n">Brown</option>
+          <option value="b">Buff</option>
+          <option value="c">Cinnamon</option>
+          <option value="g">Gray</option>
+          <option value="r">Green</option>
+          <option value="p">Pink</option>
+          <option value="u">Purple</option>
+          <option value="e">Red</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Veil Type</label>
+        <select name="veil-type">
+          <option value="p">Partial</option>
+          <option value="u">Universal</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Veil Color</label>
+        <select name="veil-color">
+          <option value="n">Brown</option>
+          <option value="o">Orange</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Ring Number</label>
+        <select name="ring-number">
+          <option value="n">None</option>
+          <option value="o">One</option>
+          <option value="t">Two</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Ring Type</label>
+        <select name="ring-type">
+          <option value="c">Cobwebby</option>
+          <option value="e">Evanescent</option>
+          <option value="f">Flaring</option>
+          <option value="l">Large</option>
+          <option value="n">None</option>
+          <option value="p">Pendant</option>
+          <option value="s">Sheathing</option>
+          <option value="z">Zone</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Spore Print Color</label>
+        <select name="spore-print-color">
+          <option value="k">Black</option>
+          <option value="n">Brown</option>
+          <option value="b">Buff</option>
+          <option value="h">Chocolate</option>
+          <option value="r">Green</option>
+          <option value="o">Orange</option>
+          <option value="u">Purple</option>
+          <option value="w">White</option>
+          <option value="y">Yellow</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Population</label>
+        <select name="population">
+          <option value="a">Abundant</option>
+          <option value="c">Clustered</option>
+          <option value="n">Numerous</option>
+          <option value="s">Scattered</option>
+          <option value="v">Several</option>
+          <option value="y">Solitary</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Habitat</label>
+        <select name="habitat">
+          <option value="g">Grasses</option>
+          <option value="l">Leaves</option>
+          <option value="m">Meadows</option>
+          <option value="p">Paths</option>
+          <option value="u">Urban</option>
+          <option value="w">Waste</option>
+          <option value="d">Wooods</option>
+        </select>
+      </div>
+
+      <button id="btnPredict" type="submit" class="cta-button">
+        Check if mushroom is poisonous
+      </button>
+
+      <div id="resultCard" class="result-card hidden">
+        <h3 id="resultTitle"></h3>
+
+        <table class="result-table">
+          <tr><th>Prediction</th><td id="predLabel"></td></tr>
+          <tr><th>Poisonous?</th><td id="predPoison"></td></tr>
+          <tr><th>Score probability</th><td id="predScore"></td></tr>
+          <tr><th>P(poisonous)</th><td id="predProbPois"></td></tr>
+        </table>
+
+        <div class="prob-wrap">
+          <span>Poisnonous propability</span>
+          <div class="prob-bar">
+            <div id="probFill" class="prob-fill"></div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </section>
+</main>
+
+<script>
+document.getElementById("mushroomForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const values = {};
+  formData.forEach((value, key) => values[key] = value);
+
+  const card = document.getElementById("resultCard");
+  card.classList.remove("hidden");
+  document.getElementById("resultTitle").textContent = "Sending request...";
+
+  try {
+    const response = await fetch("/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(values)
+    });
+
+    const text = await response.text();
+
+    if (!response.ok) {
+      document.getElementById("resultTitle").textContent = `Greška (HTTP ${response.status})`;
+      document.getElementById("predLabel").textContent = "-";
+      document.getElementById("predPoison").textContent = "-";
+      document.getElementById("predScore").textContent = "-";
+      document.getElementById("predProbPois").textContent = text;
+      document.getElementById("probFill").style.width = "0%";
+      return;
+    }
+
+    const data = JSON.parse(text);
+    const isPoison = !!data.predicted_is_poisonous;
+
+    document.getElementById("resultTitle").textContent =
+      isPoison ? "Result: POISONOUS" : "Result: EDIBLE";
+
+    document.getElementById("predLabel").textContent = data.predicted_class ?? "-";
+    document.getElementById("predPoison").textContent = isPoison ? "YES" : "NO";
+
+    document.getElementById("predScore").textContent =
+      Number.isFinite(Number(data.score_probability)) ? Number(data.score_probability).toFixed(4) : (data.score_probability ?? "-");
+
+    document.getElementById("predProbPois").textContent =
+      Number.isFinite(Number(data.prob_poisonous)) ? Number(data.prob_poisonous).toFixed(4) : (data.prob_poisonous ?? "-");
+
+    const p = Number(data.prob_poisonous);
+    const pct = Number.isFinite(p) ? Math.max(0, Math.min(100, p * 100)) : 0;
+    document.getElementById("probFill").style.width = pct + "%";
+
+    card.classList.toggle("poison", isPoison);
+    card.classList.toggle("edible", !isPoison);
+
+  } catch (err) {
+    document.getElementById("resultTitle").textContent = "Error calling service";
+    console.error(err);
+  }
+});
+</script>
+
+</body>
+</html>

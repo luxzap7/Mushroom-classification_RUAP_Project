@@ -1,0 +1,354 @@
+:root {
+    --primary: #2f5d3a;
+    --secondary: #4caf50;
+    --danger: #b71c1c;
+    --light: #f4f7f5;
+    --text: #1b1b1b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: var(--text);
+    background-image: 1.png;
+    background-size: cover;
+}
+
+
+.result-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+}
+
+.hidden { display: none; }
+
+.result-card h3 {
+  margin: 0 0 12px 0;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+.result-table th, .result-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.result-table th {
+  width: 40%;
+  opacity: 0.9;
+}
+
+.prob-wrap {
+  display: grid;
+  gap: 8px;
+}
+
+.prob-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+
+.prob-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: rgba(0, 200, 120, 0.9);
+  transition: width 0.35s ease;
+}
+
+/* Bojanje kartice ovisno o rezultatu */
+.result-card.poison .prob-fill { background: rgba(255, 80, 80, 0.95); }
+.result-card.edible .prob-fill { background: rgba(0, 200, 120, 0.95); }
+
+
+
+/* HEADER */
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header.danger {
+    background: var(--danger);
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url("https://picsum.photos/1200/400");
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+           
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.warning {
+    border-left: 6px solid var(--danger);
+}
+
+/* CONTENT */
+.content {
+    padding: 30px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+ 
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: var(--secondary);
+    color: white;
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    margin-top: 30px;
+}
+
+.footer.danger{
+ 
+    background: var(--danger);
+    
+}
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .nav a {
+        display: block;
+        margin: 8px 0;
+    }
+}
+
+
+/* GALERIJA – 2 slike po redu */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* KARTICA GLJIVE */
+.mushroom {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* SLIKA */
+.mushroom img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER ZOOM */
+.mushroom:hover img {
+    transform: scale(1.1);
+}
+
+/* TEKST KOJI SE POJAVI */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+}
+
+.mushroom:hover .overlay {
+    opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta {
+    text-align: center;
+    background: white;
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.cta h2 {
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: auto;         /* da se ne rasteže na 100% */
+    justify-self: start; /* da se ne rasteže preko ćelije */
+    align-self: start;   /* da visina ne raste s ćelijom */
+
+}
+
+.cta-button:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    align-items: start;  /* cijeli grid ne rasteže elemente */
+}
+
+.form-grid input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* RESULT */
+.hidden {
+    display: none;
+}
+
+
+.form-grid select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+}
