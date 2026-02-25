@@ -111,7 +111,6 @@ Mushroom Classification (Kaggle / UCI Mushroom dataset)
 
 Autori
 
-RUAP projektni tim (3 člana)
+RUAP projektni tim (Adriano Strganac, Ivan Cestar, Matej Andračić)
 
 
-Ako želiš, mogu ti odmah složiti i **README verziju s API primjerom request/response** (JSON iz `/predict`) da izgleda još profesionalnije za predaju.
