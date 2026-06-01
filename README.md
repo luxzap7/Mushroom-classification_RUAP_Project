@@ -17,7 +17,7 @@ Aplikacija prikazuje osnovne informacije:
 - **Backend (proxy):** Node.js + Express
 - **ML / API:** Azure Machine Learning (Designer + deployani endpoint)
 
-## Struktura projekta (primjer)
+## Struktura projekta
 
 ```text
 mushroom-web/
